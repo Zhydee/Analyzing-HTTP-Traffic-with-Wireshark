@@ -1,84 +1,118 @@
-# Analyzing HTTP Traffic with Wireshark
+# 🕵️‍♂️ Analyzing HTTP Traffic with Wireshark
 
-## Introduction
+## 📝 Introduction
 
-In this project, you'll learn how to use Wireshark to capture and analyze HTTP traffic. HTTP traffic analysis is crucial for understanding web communication, identifying potential security issues, and investigating anomalies in network traffic.
+In this project, you'll use **Wireshark** to capture and analyze **HTTP traffic**. This is essential for:
+- Understanding how web communications work
+- Spotting potential security issues
+- Investigating anomalies in network traffic
 
-## Pre-requisites
+---
+
+## 🧠 Pre-requisites
 
 - Basic understanding of networking concepts
-- Wireshark installed on your computer
-- A web browser for generating HTTP traffic
+- Wireshark installed: [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html)
+- Any modern web browser (Chrome, Firefox, etc.)
 
-## Lab Set-up and Tools
+---
 
-1. **Wireshark**: Download and install Wireshark from [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html).
-2. **Web Browser**: Any modern web browser (e.g., Chrome, Firefox) for generating HTTP traffic.
+## 🔧 Lab Setup & Tools
 
-## Exercises
+- **Wireshark**
+- **Web Browser**
 
-### Exercise 1: Capture HTTP Traffic
+---
 
-#### Steps
+## 🧪 Exercises
 
+---
+
+### 🔍 Exercise 1: Capture HTTP Traffic
+
+**Step-by-Step Instructions:**
 1. Open Wireshark.
 2. Select the network interface that connects to the internet.
-3. Click on the "Start Capture" button (the blue shark fin icon).
-4. Open your web browser and navigate to a website that uses HTTP (e.g., http://example.com).
-5. Let the page load completely and then stop the capture in Wireshark by clicking on the red square icon.
+3. Click on the **"Start Capture"** button (blue shark fin).
+4. Open your browser and go to: [http://example.com](http://example.com)
+5. Let the page load completely.
+6. Stop the capture by clicking the **red square** icon.
 
-#### Expected Output
+**📸 Screenshot Example:**
+![Step 1 - HTTP Capture](screenshots/step1_http_capture.png)
 
-- A capture file containing network traffic, including HTTP requests and responses.
+**✅ Expected Output:**
+> A capture file containing multiple packets. Look for TCP packets with `HTTP GET` requests to `example.com`.
 
-### Exercise 2: Filter HTTP Traffic
+---
 
-#### Steps
+### 🔍 Exercise 2: Filter HTTP Traffic
 
-1. In Wireshark, go to the filter bar at the top.
-2. Enter the filter `http` and press Enter.
-3. Wireshark will display only the HTTP traffic from the capture.
+**Step-by-Step Instructions:**
+1. In Wireshark, locate the filter bar at the top.
+2. Enter the filter: `http`
+3. Press Enter to apply.
 
-#### Expected Output
+**📸 Screenshot Example:**
+![Step 2 - Filter HTTP](screenshots/step2_filter_http.png)
 
-- Displayed HTTP traffic filtered from the overall capture.
+**✅ Expected Output:**
+> Only HTTP packets should be visible — making it easier to find web-related requests and responses.
 
-### Exercise 3: Analyze HTTP Requests
+---
 
-#### Steps
+### 🔍 Exercise 3: Analyze HTTP GET Requests
 
-1. In the filtered HTTP traffic, locate an HTTP GET request.
-2. Click on the GET request to view its details in the packet details pane.
-3. Expand the "Hypertext Transfer Protocol" section to see detailed information about the request, such as the requested URL, headers, and parameters.
+**Step-by-Step Instructions:**
+1. In the filtered traffic, find a packet labeled `GET`.
+2. Click it to view details.
+3. Expand the **“Hypertext Transfer Protocol”** section.
+4. Observe the requested URL, headers, and parameters.
 
-#### Expected Output
+**📸 Screenshot Example:**
+![Step 3 - GET Request](screenshots/step3_get_request.png)
 
-- Detailed information about an HTTP GET request displayed.
+**✅ Expected Output:**
+> Details like `GET /`, Host: `example.com`, and user-agent string should be visible.
 
-### Exercise 4: Analyze HTTP Responses
+---
 
-#### Steps
+### 🔍 Exercise 4: Analyze HTTP Responses
 
-1. In the filtered HTTP traffic, locate the corresponding HTTP response for the GET request you analyzed.
-2. Click on the response to view its details in the packet details pane.
-3. Expand the "Hypertext Transfer Protocol" section to see detailed information about the response, such as the status code, headers, and content type.
+**Step-by-Step Instructions:**
+1. Locate the response packet tied to the `GET` request.
+2. Click to expand the **“Hypertext Transfer Protocol”** section.
+3. Examine the status code, headers, and content type.
 
-#### Expected Output
+**📸 Screenshot Example:**
+![Step 4 - HTTP Response](screenshots/step4_http_response.png)
 
-- Detailed information about an HTTP response displayed.
+**✅ Expected Output:**
+> You should see `200 OK`, `Content-Type: text/html`, and possibly `Server` header.
 
-### Exercise 5: Extract and Examine Payload Data
+---
 
-#### Steps
+### 🔍 Exercise 5: Extract and Examine Payload Data
 
-1. In the HTTP response details, look for the payload data (e.g., HTML content).
-2. Right-click on the response packet and select "Follow" > "TCP Stream" to view the entire HTTP conversation.
-3. Examine the payload data in the TCP stream window to understand the content being transferred.
+**Step-by-Step Instructions:**
+1. Right-click the response packet.
+2. Select **Follow > TCP Stream**.
+3. View the full HTTP conversation in the stream window.
 
-#### Expected Output
+**📸 Screenshot Example:**
+![Step 5 - TCP Stream](screenshots/step5_tcp_stream.png)
 
-- Payload data from the HTTP response extracted and examined.
+**✅ Expected Output:**
+> HTML content of the page should be visible, showing what was transferred to the browser.
 
-## Conclusion
+---
 
-By completing these exercises, you have learned how to capture, filter, and analyze HTTP traffic using Wireshark. These skills are essential for understanding web communication, troubleshooting network issues, and performing security investigations.
+## ✅ Conclusion
+
+By completing these exercises, you've learned how to:
+- Capture and filter HTTP traffic
+- Analyze web requests and responses
+- Extract data for security or troubleshooting
+
+These skills are foundational for SOC analysts, network investigators, and penetration testers.
+
