@@ -48,8 +48,7 @@ Figure 2: Captured HTTP traffic showing a successful HTTP 200 OK response with c
 </p> 
   
 **✅ Expected Output:**
-> A capture file containing multiple packets.  
-> Look for TCP packets with `HTTP GET` requests and HTTP responses such as `HTTP/1.1 200 OK`, preferably to a known HTTP site (e.g., `http://kedaipakkarim.hstn.me`).
+> The capture file that I provided contains multiple packets, including TCP packets with HTTP GET requests and HTTP responses such as HTTP/1.1 200 OK. These packets correspond to communications with a known HTTP site, for example, http://kedaipakkarim.hstn.me. This confirms that the network traffic includes standard HTTP request-response exchanges, which can be identified and analyzed within the capture.
 
 ---
 
@@ -67,7 +66,7 @@ Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
 </p>
 
 **✅ Expected Output:**
-> Only HTTP packets should be visible in the capture, helping to identify web-related traffic such as GET and response headers.
+>The capture file should contains only HTTP packets, which helps isolate and identify web-related traffic. This includes HTTP GET requests and their corresponding response headers, making it easier to analyze the HTTP communication without unrelated protocol noise.
 
 ---
 
@@ -79,11 +78,14 @@ Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
 3. Expand the **“Hypertext Transfer Protocol”** section.
 4. Observe the requested URL, headers, and parameters.
 
-**📸 Screenshot Example:**
-![Step 3 - GET Request](screenshots/step3_get_request.png)
+**📸 Screenshot:**
+<p align="center">
+Figure 4: Analyzing an HTTP GET Request in Wireshark After Applying Filter <br/>
+<img src="https://i.imgur.com/4cyMbyn.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+</p>
 
 **✅ Expected Output:**
-> Details like `GET /`, Host: `example.com`, and user-agent string should be visible.
+> The packet shown is an HTTP GET request sent from the client to the server. The Host header specifies the target domain (kedaipakkarim.hstn.me), and the User-Agent header reveals the browser and operating system used by the client. Additional headers such as Accept, Accept-Encoding, and Connection give insight into the types of content the client is willing to receive and how it wants to manage the connection. These details are critical for understanding client behavior and HTTP request structure in network analysis.
 
 ---
 
@@ -94,11 +96,14 @@ Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
 2. Click to expand the **“Hypertext Transfer Protocol”** section.
 3. Examine the status code, headers, and content type.
 
-**📸 Screenshot Example:**
-![Step 4 - HTTP Response](screenshots/step4_http_response.png)
+**📸 Screenshot:**
+<p align="center">
+Figure 5: HTTP Response with Status Code 200 OK and HTML Content <br/>
+<img src="https://i.imgur.com/bxANZma.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+</p>
 
 **✅ Expected Output:**
-> You should see `200 OK`, `Content-Type: text/html`, and possibly `Server` header.
+> The packet shown is an HTTP response to a previous GET request. The status line HTTP/1.1 200 OK indicates that the server successfully handled the request. The Content-Type: text/html; charset=UTF-8 header confirms that the server returned an HTML document. Other headers like Server: openresty and Transfer-Encoding: chunked provide more information about the server type and how the response body is delivered. This confirms a successful and properly formatted response from the server.
 
 ---
 
@@ -109,20 +114,28 @@ Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
 2. Select **Follow > TCP Stream**.
 3. View the full HTTP conversation in the stream window.
 
-**📸 Screenshot Example:**
-![Step 5 - TCP Stream](screenshots/step5_tcp_stream.png)
+**📸 Screenshot:**
+<p align="center">
+Figure 6: Initiating TCP Stream View from HTTP Response Packet <br/>
+<img src="https://i.imgur.com/glwKrSC.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+</p>
+
+<p align="center">
+Figure 7: TCP Stream View from HTTP Response Packet<br/>
+<img src="https://i.imgur.com/ZmvX4wj.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+</p>
 
 **✅ Expected Output:**
-> HTML content of the page should be visible, showing what was transferred to the browser.
+> The full HTTP conversation is successfully displayed, showing both the client's GET request and the server's HTTP/1.1 200 OK response. The payload contains HTML content, including metadata such as page title and icon references. This confirms that the server returned a valid HTML web page in response to the client's request. Using Follow TCP Stream helps visualize complete data exchange, including headers and body, making it easier to analyze web traffic and inspect transferred content.
 
 ---
 
 ## ✅ Conclusion
 
-By completing these exercises, you've learned how to:
-- Capture and filter HTTP traffic
+By completing these exercises, I learned how to:
+- Capture and filter HTTP traffic using Wireshark to isolate web-related packets
 - Analyze web requests and responses
-- Extract data for security or troubleshooting
+- Gained hands-on experience with packet analysis tools critical for network monitoring
 
 These skills are foundational for SOC analysts, network investigators, and penetration testers.
 
