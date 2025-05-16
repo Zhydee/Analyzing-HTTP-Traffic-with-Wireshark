@@ -34,15 +34,22 @@ In this project, you'll use **Wireshark** to capture and analyze **HTTP traffic*
 1. Open Wireshark.
 2. Select the network interface that connects to the internet.
 3. Click on the **"Start Capture"** button (blue shark fin).
-4. Open your browser and go to: [http://example.com](http://example.com)
+4. Open your browser and go to: [http://kedaipakkarim.hstn.me](http://kedaipakkarim.hstn.me/)
 5. Let the page load completely.
 6. Stop the capture by clicking the **red square** icon.
 
-**📸 Screenshot Example:**
-![Step 1 - HTTP Capture](screenshots/step1_http_capture.png)
-
+**📸 Screenshot:**
+<p align="center">
+Figure 1: Launch Wireshark <br/>
+<img src="https://i.imgur.com/Mba1Cqw.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<p align="center">
+Figure 2: Captured HTTP traffic showing a successful HTTP 200 OK response with content type text/html <br/>
+<img src="https://i.imgur.com/4SvoAbU.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+</p> 
+  
 **✅ Expected Output:**
-> A capture file containing multiple packets. Look for TCP packets with `HTTP GET` requests to `example.com`.
+> A capture file containing multiple packets.  
+> Look for TCP packets with `HTTP GET` requests and HTTP responses such as `HTTP/1.1 200 OK`, preferably to a known HTTP site (e.g., `http://kedaipakkarim.hstn.me`).
 
 ---
 
@@ -53,11 +60,14 @@ In this project, you'll use **Wireshark** to capture and analyze **HTTP traffic*
 2. Enter the filter: `http`
 3. Press Enter to apply.
 
-**📸 Screenshot Example:**
-![Step 2 - Filter HTTP](screenshots/step2_filter_http.png)
+**📸 Screenshot:**
+<p align="center">
+Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
+<img src="https://i.imgur.com/k7WhIZf.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+</p>
 
 **✅ Expected Output:**
-> Only HTTP packets should be visible — making it easier to find web-related requests and responses.
+> Only HTTP packets should be visible in the capture, helping to identify web-related traffic such as GET and response headers.
 
 ---
 
