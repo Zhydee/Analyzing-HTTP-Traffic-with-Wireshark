@@ -82,7 +82,7 @@ Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
 **📸 Screenshot:**
 <p align="center">
 Figure 4: Analyzing an HTTP GET Request in Wireshark After Applying Filter <br/>
-<img src="images/4.GET.png" width="800px" alt="Wireshark Basic Project"/>
+<img src="images/4.Analyze_Get_Request.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 **✅ Expected Output:**
@@ -100,7 +100,7 @@ Figure 4: Analyzing an HTTP GET Request in Wireshark After Applying Filter <br/>
 **📸 Screenshot:**
 <p align="center">
 Figure 5: HTTP Response with Status Code 200 OK and HTML Content <br/>
-<img src="images/5.Analyze_Get_Request.png" width="800px" alt="Wireshark Basic Project"/>
+<img src="images/5. HTTP Response.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 **✅ Expected Output:**
