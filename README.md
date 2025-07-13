@@ -42,10 +42,10 @@ In this project, you'll use **Wireshark** to capture and analyze **HTTP traffic*
 **📸 Screenshot:**
 <p align="center">
 Figure 1: Launch Wireshark <br/>
-<img src="images/1.Launch_Wireshark.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/1.Launch_Wireshark.png" width="800px" alt="Wireshark Basic Project"/>
 <p align="center">
 Figure 2: Captured HTTP traffic showing a successful HTTP 200 OK response with content type text/html <br/>
-<img src="images/2.Captured_HTTP traffic.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/2.Captured_HTTP traffic.png" width="800px" alt="Wireshark Basic Project"/>
 </p> 
   
 **✅ Expected Output:**
@@ -63,7 +63,7 @@ Figure 2: Captured HTTP traffic showing a successful HTTP 200 OK response with c
 **📸 Screenshot:**
 <p align="center">
 Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
-<img src="images/3.Filter_http.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/3.Filter_http.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 **✅ Expected Output:**
@@ -82,7 +82,7 @@ Figure 3:  HTTP Traffic Captured After Applying Filter in Wireshark <br/>
 **📸 Screenshot:**
 <p align="center">
 Figure 4: Analyzing an HTTP GET Request in Wireshark After Applying Filter <br/>
-<img src="images/4.GET.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/4.GET.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 **✅ Expected Output:**
@@ -100,7 +100,7 @@ Figure 4: Analyzing an HTTP GET Request in Wireshark After Applying Filter <br/>
 **📸 Screenshot:**
 <p align="center">
 Figure 5: HTTP Response with Status Code 200 OK and HTML Content <br/>
-<img src="images/5.Analyze_Get_Request.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/5.Analyze_Get_Request.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 **✅ Expected Output:**
@@ -118,12 +118,12 @@ Figure 5: HTTP Response with Status Code 200 OK and HTML Content <br/>
 **📸 Screenshot:**
 <p align="center">
 Figure 6: Initiating TCP Stream View from HTTP Response Packet <br/>
-<img src="images/6.Initiate_TCP_Stream_View.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/6.Initiate_TCP_Stream_View.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 <p align="center">
 Figure 7: TCP Stream View from HTTP Response Packet<br/>
-<img src="images/7.TCP_StreamView.png" height="80%" width="80%" alt="Wireshark Basic Project"/>
+<img src="images/7.TCP_StreamView.png" width="800px" alt="Wireshark Basic Project"/>
 </p>
 
 **✅ Expected Output:**
