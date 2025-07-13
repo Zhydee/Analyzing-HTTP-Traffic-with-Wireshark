@@ -44,7 +44,7 @@ In this project, you'll use **Wireshark** to capture and analyze **HTTP traffic*
 Figure 1: Launch Wireshark <br/>
 <img src="images/1.Launch_Wireshark.png" width="800px" alt="Wireshark Basic Project"/>
 <p align="center">
-Figure 2: Captured HTTP traffic showing a successful HTTP 200 OK response with content type text/html <br/>
+Figure 2: Captured traffic <br/>
 <img src="images/2.Captured_HTTP traffic.png" width="800px" alt="Wireshark Basic Project"/>
 </p> 
   
